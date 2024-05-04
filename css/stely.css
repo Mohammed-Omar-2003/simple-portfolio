@@ -1,0 +1,568 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400;1,500;1,600;1,700;1,800&family=Signika+Negative:wght@300;400;500;700&display=swap'); */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+  font-family: "Nunito", sans-serif;
+  font-family: "Signika Negative", sans-serif;
+}
+
+:root {
+  --yellow: #f9ca24;
+}
+
+/* عشان لما اعمل نسخ للكلام */
+*::selection {
+  background: var(--yellow);
+  color: #333;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+/* عشان اغير شكل الاسكرول */
+html::-webkit-scrollbar {
+  width: 1.4rem;
+}
+html::-webkit-scrollbar-track {
+  background: #222;
+}
+html::-webkit-scrollbar-thumb {
+  background: var(--yellow);
+}
+
+body {
+  background: #111;
+  overflow-x: hidden;
+  color: #fff;
+  padding-left: 35rem;
+  position: relative;
+}
+body .restart {
+  position: fixed;
+  z-index: 2000;
+  bottom: 5rem;
+  right: 3rem;
+  background: var(--yellow);
+  padding: 1.5rem 1rem;
+  font-size: 3rem;
+  color: #111;
+}
+body .restart:hover {
+  box-shadow: 0 0 1rem 0.01rem #999;
+  z-index: 2;
+}
+section {
+  min-height: 100vh;
+  padding: 1rem;
+}
+.one {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 0.2px solid var(--yellow);
+  margin: 1rem 20rem;
+  padding-bottom: 2rem;
+  font-size: 3rem;
+}
+.btn {
+  padding: 0.9rem 4rem;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 2.2rem;
+  border-radius: 5rem;
+}
+.btn:hover {
+  background: var(--yellow);
+}
+span {
+  color: var(--yellow);
+}
+.icon a {
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: var(--yellow);
+  padding: 1rem 1rem;
+}
+.icon a :hover {
+  color: #fff;
+}
+
+/* small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* start header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 100%;
+  width: 35rem;
+  background: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  text-align: center;
+}
+
+header .user img {
+  background-color: #1a1a1a;
+  height: 17rem;
+  width: 17rem;
+  border-radius: 50%;
+  /* عشان الصوره تاخد المكان كله  */
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 0.7rem solid var(--yellow);
+}
+
+header .user .name {
+  font-size: 3.5rem;
+  color: #fff;
+}
+
+header .user .post {
+  font-size: 2rem;
+  color: #eee;
+}
+
+header .naving {
+  width: 100%;
+}
+
+header .naving ul {
+  list-style: none;
+  padding: 1rem 3rem;
+}
+header .naving ul li a {
+  display: block;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  color: #fff;
+  font-size: 2rem;
+  background: #333;
+  border-radius: 5rem;
+}
+
+header .naving ul li a:hover {
+  background: var(--yellow);
+}
+/* end header */
+/* start home */
+.home {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  padding: 0 15rem;
+}
+.home h3 {
+  font-size: 2.5rem;
+  color: #fff;
+}
+.home h1 {
+  font-size: 5rem;
+  color: #fff;
+  padding: 1rem 0;
+}
+.home h1 span {
+  color: var(--yellow);
+}
+.home p {
+  font-size: 2rem;
+  color: #eee;
+  padding: 1rem 0;
+}
+/* end home */
+/* start about */
+.about {
+  margin-bottom: 20rem;
+}
+.about .two {
+  margin-top: 15rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 50px;
+  padding: 0 10rem;
+}
+
+.about .two .data h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 2rem 0;
+}
+.about .two .box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.about .two .box div {
+  background-color: #333;
+  display: block;
+  text-align: center;
+  padding: 5rem 4rem;
+}
+.about .two .box div:hover {
+  box-shadow: 0 0 2rem 0.01rem #eee;
+  z-index: 2;
+}
+.about .two .box div h1 {
+  color: var(--yellow);
+  font-size: 4rem;
+  font-weight: 400;
+  padding-top: 1rem;
+}
+.about .two .box div h3 {
+  font-size: 1.8rem;
+  padding: 0.5rem;
+}
+
+/* end about */
+/* start skill */
+.skill {
+  margin-bottom: 20rem;
+}
+.skill .our-skills {
+  margin-right: 20px;
+  width: 55rem;
+  margin: 10rem auto;
+}
+.skill .our-skills .box {
+  margin-bottom: 30px;
+}
+.skill .our-skills .box h1 {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.skill .our-skills .box .porg {
+  background-color: #eee;
+  height: 30px;
+  border-radius: 2rem;
+}
+.skill .our-skills .box .porg:hover {
+  box-shadow: 0 10px 8px 0.01px #3b3920, 0 10px 10px 0.1px #444;
+}
+.skill .our-skills .box span {
+  display: block;
+  background-color: var(--yellow);
+  height: 100%;
+  position: relative;
+  border-radius: 2rem;
+}
+.skill .our-skills .box span::before {
+  content: attr(data-progress);
+  position: absolute;
+  top: -40px;
+  right: -12px;
+  color: #fff;
+  color: var(--yellow);
+  text-align: center;
+  padding: 1px 5px;
+  border: 0.5px solid #666;
+  border-radius: 1rem;
+  font-size: 10px;
+  font-weight: bold;
+}
+/* end skill */
+
+/* start certificate */
+.certificate {
+  position: relative;
+}
+.certificate .two {
+  margin: 10rem 20rem 20rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 80px;
+}
+.certificate .box {
+  display: grid;
+  justify-content: center;
+  position: relative;
+}
+.certificate .two img {
+  width: 250px;
+  height: 180px;
+}
+.certificate .box h3 {
+  position: absolute;
+  font-size: 5rem;
+  color: var(--yellow);
+  z-index: 5;
+  top: 35%;
+  left: 45%;
+  display: none;
+}
+.certificate .box div {
+  border: solid 5px #f9ca24;
+}
+.certificate .box .tt {
+  border: none;
+  position: absolute;
+  bottom: 5px;
+  background: #111;
+  width: 250px;
+  text-align: center;
+  padding: 3px;
+  color: var(--yellow);
+}
+
+.certificate .box :hover h3 {
+  display: block;
+}
+.certificate .box :hover img {
+  filter: blur(4px);
+}
+.certificate .box :hover .tt {
+  display: none;
+}
+/* end certificate */
+/* --------------------------------السهمين  والنقط ال فيهم */
+.three i {
+  position: absolute;
+  color: var(--yellow);
+  font-size: 4rem;
+  top: 55%;
+  margin: 4rem;
+}
+.three .fa-angle-right {
+  right: 0rem;
+}
+.three i:hover {
+  color: #eee;
+}
+.bullets {
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+}
+.three li {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  margin-right: 10px;
+  list-style: none;
+}
+.three .active {
+  background-color: var(--yellow);
+}
+/* ------------------------------------السهمين  والنقط ال فيهم */
+/* start portfolio */
+.portfolio {
+  position: relative;
+}
+.portfolio .two {
+  margin: 10rem 20rem 20rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 80px;
+}
+.portfolio .box {
+  display: grid;
+  justify-content: center;
+  position: relative;
+}
+.portfolio .two img {
+  width: 250px;
+  height: 180px;
+}
+.portfolio .box h3 {
+  position: absolute;
+  font-size: 2rem;
+  color: var(--yellow);
+  z-index: 5;
+  top: 45%;
+  left: 32%;
+  display: none;
+}
+.portfolio .box div {
+  border: solid 5px #f9ca24;
+}
+.portfolio .box .tt {
+  border: none;
+  position: absolute;
+  bottom: 5px;
+  background: #111;
+  width: 250px;
+  text-align: center;
+  padding: 3px;
+  color: var(--yellow);
+}
+.portfolio .box :hover h3 {
+  display: block;
+}
+.portfolio .box :hover img {
+  filter: blur(4px);
+}
+.portfolio .box :hover .tt {
+  display: none;
+}
+/* end portfolio */
+/* start contact */
+.contact .two {
+  margin-top: 15rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 50px;
+  padding: 0 10rem;
+  margin-bottom: 20rem;
+}
+.contact .data h1 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+.contact .data div {
+  margin-bottom: 2rem;
+}
+.contact .data div i {
+  color: var(--yellow);
+  margin-right: 1rem;
+  font-size: 2.2rem;
+}
+.contact .data div h3 {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.contact .input div {
+  margin-bottom: 3rem;
+}
+.contact .input div .ne {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  background: #222;
+  font-size: 1.6rem;
+  border-radius: 0.5rem;
+  color: #eee;
+}
+.contact .input div .text {
+  width: 100%;
+  height: 40%;
+  padding: 10px;
+  background: #222;
+  font-size: 1.6rem;
+  border-radius: 0.5rem;
+  color: #eee;
+}
+.contact .input div .ne:hover,
+.contact .input div .text:hover {
+  background: #333;
+}
+.contact .input .send {
+  background: #777;
+  padding: 7px;
+  max-width: 100px;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+}
+.contact .input .send input {
+  background: #777;
+  color: #eee;
+  margin: 0 1rem;
+  font-size: 1.6rem;
+}
+.contact .input .send:hover input {
+  background: var(--yellow);
+  color: #222;
+}
+.contact .input .send:hover {
+  background: var(--yellow);
+  color: #222;
+}
+/* end contact */
+/* ---------------------------------------media querise */
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+  .home {
+    padding: 1rem 4rem;
+  }
+}
+@media (min-width: 991px) {
+  .ccon {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  header {
+    left: -120%;
+  }
+  header .naving {
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #f9ca24;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+  }
+  header .naving ul li {
+    display: inline-block;
+    margin-left: 1rem;
+  }
+  header .naving ul li a {
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #111;
+    background: var(--yellow);
+  }
+  header .naving ul li a:hover {
+    background: #111;
+    color: #fff;
+  }
+
+  body {
+    padding: 0;
+  }
+}
+@media (max-width: 768px) {
+  .about .two {
+    margin-left: -5rem;
+  }
+  .about .two .box {
+    display: block;
+    margin-bottom: 2rem;
+  }
+  .about .two .box div {
+    margin-bottom: 2rem;
+  }
+}
